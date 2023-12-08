@@ -89,7 +89,7 @@ Buscar Usuário por ID(getUsers) -> "/user/:id"
 
 ## 👨‍💻 Como utilizar
 
-## instale o MYSQL é necessário( para linux esse comando serve )
+## instalar o MYSQL
 
 ```bash
 $ sudo apt install mysql-server
@@ -110,7 +110,7 @@ $ cd desafio02-escribo
 ## Crie as tabelas
 
 ```bash
-$ CREATE TABLE data(
+$ CREATE TABLE users(
  id INT AUTO_INCREMENT PRIMARY KEY,
  nome VARCHAR(100) NOT NULL,
  email VARCHAR(50) NOT NULL,
@@ -130,10 +130,5 @@ $ CREATE TABLE data(
 $ node server.js
 ```
 
-## Recomendo o Thunder Client para testes
-
-```bash
-$ npm install -g vscode-thunderclient
-```
 
 ## Pronto, sua API está disponível na porta 8080, http://localhost:8080
