@@ -89,22 +89,51 @@ Buscar Usuário por ID(getUsers) -> "/user/:id"
 
 ## 👨‍💻 Como utilizar
 
+## instale o MYSQL é necessário( para linux esse comando serve )
+
+```bash
+$ sudo apt install mysql-server
+```
+
 ## Clone o projeto
 
 ```bash
-$ git clone https://github.com/Berto021/desafio-01-escribo-jsvanilla.git
+$ git clone https://github.com/Berto021/desafio02-escribo.git
 ```
 
 ## Entre no diretório
 
 ```bash
-$ cd desafio02
+$ cd desafio02-escribo
+```
+
+## Crie as tabelas
+
+```bash
+$ CREATE TABLE data(
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ nome VARCHAR(100) NOT NULL,
+ email VARCHAR(50) NOT NULL,
+ senha VARCHAR(100) NOT NULL,
+ telefones VARCHAR(255) NOT NULL,
+ data_criacao DATETIME NOT NULL,
+ data_atualizacao DATETIME NOT NULL,
+ ultimo_login DATETIME NOT NULL,
+ token VARCHAR(255) NOT NULL,
+ UNIQUE KEY (email)
+)
 ```
 
 ## Suba o servidor local
 
 ```bash
 $ node server.js
+```
+
+## Recomendo o Thunder Client para testes
+
+```bash
+$ npm install -g vscode-thunderclient
 ```
 
 ## Pronto, sua API está disponível na porta 8080, http://localhost:8080
